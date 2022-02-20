@@ -41,6 +41,7 @@ Design
 Licence
 ======
 
+https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project
 &copy; All rights reserved 2021
 
 
