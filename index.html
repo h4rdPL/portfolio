@@ -7,5 +7,120 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Portfolio - Mateusz Mamica</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="menu">
+      <img src="images/logo.svg" alt="Logo" />
+      <div class="hamburger">
+        <div class="hamburger__inner">asd</div>
+      </div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#">Home</a>
+        </li>
+        <li class="menu__item">
+          <a href="#">My projects</a>
+        </li>
+        <li class="menu__item">
+          <a href="#">My skills</a>
+        </li>
+        <li class="menu__item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <hero class="main">
+      <div class="main__container">
+        <h1 class="main__heading heading">Hello 👋 I am Matthew</h1>
+        <p class="main__description">Creative front-end developer</p>
+        <button class="btn">My projects</button>
+      </div>
+      <img
+        src="images/hero-image.svg"
+        alt="people-image-hero"
+        class="main__image"
+      />
+    </hero>
+    <section class="projects">
+      <h2 class="projects__heading heading">My projects ⌨️</h2>
+      <div class="carousel carousel--projects">
+        <div class="carousel__item">
+          <img
+            src="images/design-url-shortening.jpg"
+            alt="carousel-img"
+            class="carousel__img"
+          />
+          <div class="carousel__info">
+            <h3 class="carousel__heading">Flag REST-API</h3>
+            <ul class="carousel__tags">
+              <li class="carousel__tags__item">React</li>
+              <li class="carousel__tags__item">TypeScript</li>
+              <li class="carousel__tags__item">Styled-components</li>
+            </ul>
+            <p class="carousel__description">
+              React application based on REST API. App using styled-components
+              for styling, and TypeScript. Based on atomic design - storybook.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <h2 class="skills__header">My skills 🧠</h2>
+      <div class="carousel carousel--skills">
+        <span class="carousel__arrow carousel__arrow--left">
+          <img src="images/icons/arrow-left.svg" alt="arrow-left" />
+        </span>
+        <ul class="carousel__list">
+          <li class="carousel__item">
+            <img src="images/icons/javascript.svg" alt="javascript-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/typescript.svg" alt="typescript-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/wordpres.svg" alt="wordpress-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/typescript.svg" alt="react-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/react.svg" alt="typescript-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/mysql.svg" alt="mysql-icon" />
+          </li>
+          <li class="carousel__item">
+            <img src="images/icons/nodejs.svg" alt="nodejs-icon" />
+          </li>
+        </ul>
+        <span class="carousel__arrow carousel__arrow--left">
+          <img src="images/icons/arrow-right.svg" alt="arrow-right" />
+        </span>
+      </div>
+      <!-- check if this is good  -->
+      <img src="images/wave-skills.svg" alt="wave-skills" />
+    </section>
+    <section class="contact">
+      <form class="contact__form">
+        <h1 class="form__heading">Get in touch! ✉️</h1>
+        <input type="email" placeholder="Email" class="contact__input" />
+        <input type="text" placeholder="Title" class="contact__input" />
+        <textarea
+          placeholder="Write something..."
+          id="textarea"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button class="btn">send</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <img
+        src="images/wave-footer.svg"
+        alt="wave-footer"
+        class="footer__waves"
+      />
+      <p class="footer__text">Made with ❣️ by h4rdPL</p>
+    </footer>
+  </body>
 </html>
