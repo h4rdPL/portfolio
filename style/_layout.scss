@@ -117,8 +117,6 @@
     }
   }
 }
-svg {
-}
 
 .btn {
   position: relative;
@@ -143,5 +141,87 @@ svg {
   }
   &:hover::before {
     transform: translate(0, 0);
+  }
+}
+
+// project section
+
+.projects {
+  min-height: 30vh;
+  text-align: center;
+  padding-bottom: 5rem;
+  &__heading {
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 0.9rem;
+  &__item {
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0.7rem;
+    @media (min-width: $tablet) {
+      width: 300px;
+    }
+  }
+  &__info {
+    padding: 1.5rem;
+    text-align: left;
+    background-color: $secondaryColor;
+    color: $white;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin: 1.3rem 0;
+    &__item {
+      padding: 0.25rem 0.7rem;
+      border-radius: 5px;
+      color: $secondaryColor;
+      background-color: $primaryColor;
+    }
+  }
+  img {
+    height: auto;
+  }
+}
+
+// skills section
+
+.skills {
+  background-color: $primaryColor;
+  position: relative;
+  min-height: 50vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  &__header {
+    grid-column: 1/-1;
+    padding-bottom: 1.5rem;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
