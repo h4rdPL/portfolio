@@ -11,7 +11,16 @@
   z-index: 999;
   align-items: center;
   padding: 1.25rem;
+  @media (min-width: $desktop) {
+    padding: 0;
+    justify-content: space-around;
+    -webkit-backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.5px);
+    background-color: #ededed3b;
+  }
   &__list {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 5%;
@@ -24,10 +33,21 @@
     opacity: 0;
     transition: all 0.3s ease-in-out;
     z-index: 999;
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      position: relative;
+      transform: translate(0);
+      opacity: 1;
+      width: fit-content;
+      background-color: transparent;
+    }
   }
   &__item {
-    // z-index: 999;
     padding: 0.5rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 .hamburger {
@@ -35,6 +55,9 @@
   height: 18px;
   width: 30px;
   cursor: pointer;
+  @media (min-width: $desktop) {
+    display: none;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -151,8 +174,7 @@
   text-align: center;
   padding-bottom: 5rem;
   &__heading {
-    font-size: 1.7rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -189,39 +211,48 @@
       background-color: $primaryColor;
     }
   }
+
+  &__btn {
+    background-color: $white;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
   img {
     height: auto;
   }
 }
 
-// skills section
-
-.skills {
+.contact {
+  min-height: 30vh;
   background-color: $primaryColor;
-  position: relative;
-  min-height: 50vh;
-  text-align: center;
+  padding: 3rem;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
-  padding: 2rem;
-  &__header {
-    grid-column: 1/-1;
-    padding-bottom: 1.5rem;
-  }
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    @media (min-width: $tablet) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+  align-items: center;
 
-  &__waves {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     width: 100%;
+    max-width: 450px;
   }
+  &__input {
+    padding: 0.7rem;
+    border: 1px solid $secondaryColor;
+  }
+  &__btn {
+    background-color: $white;
+    width: fit-content;
+    align-self: flex-end;
+  }
+}
+
+// footer
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
 }
