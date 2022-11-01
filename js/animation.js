@@ -13,20 +13,3 @@ window.addEventListener("load", () => {
     duration: 0.5,
   });
 });
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#projects",
-    start: "top top",
-    end: "+=300%",
-    pin: true,
-  },
-});
-
-tl1.to(
-  {
-    yPercent: -100,
-    ease: "none",
-    stagger: 0.5,
-  },
-  0
-);
