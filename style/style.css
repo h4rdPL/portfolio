@@ -57,8 +57,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1200px) {
   .menu {
-    padding: 0;
-    justify-content: space-around;
+    padding: 0 2rem;
     -webkit-backdrop-filter: blur(1.5px);
     backdrop-filter: blur(1.5px);
     background-color: rgba(237, 237, 237, 0.231372549);
@@ -82,8 +81,9 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 1200px) {
   .menu__list {
-    flex-direction: row;
     position: relative;
+    left: 0;
+    flex-direction: row;
     transform: translate(0);
     opacity: 1;
     width: -webkit-fit-content;
@@ -231,6 +231,12 @@ body::-webkit-scrollbar-thumb {
 .projects__heading {
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .projects__heading {
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+  }
+}
 
 .carousel {
   display: flex;
@@ -279,13 +285,19 @@ body::-webkit-scrollbar-thumb {
 
 .contact {
   min-height: 30vh;
-  background-color: hsl(53deg, 97%, 51%);
+  background-color: #ededed;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .contact__heading {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .contact__form {
   display: flex;
@@ -299,7 +311,6 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid hsl(0deg, 0%, 10%);
 }
 .contact__btn {
-  background-color: hsl(255deg, 100%, 100%);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

@@ -1,4 +1,3 @@
-console.log("hey!");
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 const handleClick = () => {
