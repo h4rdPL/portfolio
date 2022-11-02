@@ -1,6 +1,6 @@
+const section = document.getElementsByClassName("grid");
+// gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", () => {
-  console.log("page is loaded");
-
   gsap.from("#nav", {
     opacity: 0,
     y: -10,
@@ -9,7 +9,24 @@ window.addEventListener("load", () => {
   gsap.from("#hero", {
     opacity: 0,
     y: -100,
-    delay: 1,
+    delay: 0.5,
     duration: 0.5,
   });
 });
+
+gsap.fromTo(
+  section,
+  {
+    x: "+=300",
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top center",
+    },
+  }
+);
