@@ -44,6 +44,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 15px;
 }
 
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+}
+
 .menu {
   position: fixed;
   top: 0;
@@ -321,9 +326,4 @@ body::-webkit-scrollbar-thumb {
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
-}
-
-.footer {
-  text-align: center;
-  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

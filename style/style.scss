@@ -1,3 +1,9 @@
+//global and resets
 @import "_global.scss";
 @import "_reset.scss";
-@import "_layout.scss";
+
+// components
+@import "_footer.scss";
+@import "_hero.scss";
+@import "_projects.scss";
+@import "_contact.scss";
