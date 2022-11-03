@@ -1,3 +1,4 @@
+//
 const section = document.getElementsByClassName("grid");
 // gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", () => {
@@ -13,7 +14,7 @@ window.addEventListener("load", () => {
     duration: 0.5,
   });
 });
-
+// project secion animation
 gsap.fromTo(
   section,
   {

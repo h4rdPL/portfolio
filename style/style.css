@@ -231,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 
 .projects {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 4rem;
 }
 .projects__heading {
   margin-bottom: 2rem;
