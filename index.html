@@ -1,163 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <!-- gsap -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- ScrollTrigger -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-    <title>Portfolio - Mateusz Mamica</title>
-  </head>
-  <body>
-    <nav class="menu" id="nav">
-      <img src="images/logo.svg" alt="Logo" />
-      <div class="hamburger" id="hamburger">
-        <div class="hamburger__inner"></div>
-      </div>
-      <ul class="menu__list" id="menu">
-        <li class="menu__item">
-          <a href="#">Home</a>
-        </li>
-        <li class="menu__item">
-          <a href="#">My projects</a>
-        </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 
-        <li class="menu__item">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <hero class="main" id="hero">
-      <div class="main__container">
-        <h1 class="main__heading heading">
-          Hello 👋 <br />
-          I am Matthew
-        </h1>
-        <p class="main__description">Creative front-end developer</p>
-        <button class="btn">My projects</button>
-      </div>
-      <img
-        src="images/hero-image.svg"
-        alt="people-image-hero"
-        class="main__image"
-      />
-    </hero>
-    <section class="projects" id="projects">
-      <h2 class="projects__heading heading">My projects ⌨️</h2>
-        <div class="grid ">
-          <!-- grid item -->
-          <div class="grid__item">
-            <img
-              src="images/design-url-shortening.jpg"
-              alt="grid-img"
-              class="grid__img"
-            />
-            <div class="grid__info">
-              <h3 class="grid__heading">Flag REST-API</h3>
-              <ul class="grid__tags">
-                <li class="grid__tags__item">React</li>
-                <li class="grid__tags__item">Styled-components</li>
-              </ul>
-              <p class="grid__description">
-                React application based on REST API. App is using
-                styled-components
-              </p>
-              <button class="btn grid__btn">See more</button>
-            </div>
-          </div>
-            <!-- grid item -->
-            <div class="grid__item">
-              <img
-                src="images/design-url-shortening.jpg"
-                alt="grid-img"
-                class="grid__img"
-              />
-              <div class="grid__info">
-                <h3 class="grid__heading">Flag REST-API</h3>
-                <ul class="grid__tags">
-                  <li class="grid__tags__item">React</li>
-                  <li class="grid__tags__item">Styled-components</li>
-                </ul>
-                <p class="grid__description">
-                  React application based on REST API. App is using
-                  styled-components
-                </p>
-                <button class="btn grid__btn">See more</button>
-              </div>
-            </div>
-             <!-- grid item -->
-             <div class="grid__item">
-              <img
-                src="images/design-url-shortening.jpg"
-                alt="grid-img"
-                class="grid__img"
-              />
-              <div class="grid__info">
-                <h3 class="grid__heading">Flag REST-API</h3>
-                <ul class="grid__tags">
-                  <li class="grid__tags__item">React</li>
-                  <li class="grid__tags__item">Styled-components</li>
-                </ul>
-                <p class="grid__description">
-                  React application based on REST API. App is using
-                  styled-components
-                </p>
-                <button class="btn grid__btn">See more</button>
-              </div>
-            </div>
-             <!-- grid item -->
-             <div class="grid__item">
-              <img
-                src="images/design-url-shortening.jpg"
-                alt="grid-img"
-                class="grid__img"
-              />
-              <div class="grid__info">
-                <h3 class="grid__heading">Flag REST-API</h3>
-                <ul class="grid__tags">
-                  <li class="grid__tags__item">React</li>
-                  <li class="grid__tags__item">Styled-components</li>
-                </ul>
-                <p class="grid__description">
-                  React application based on REST API. App is using
-                  styled-components
-                </p>
-                <button class="btn grid__btn">See more</button>
-              </div>
-            </div>
+  <title>Portfolio - Mateusz Mamica</title>
+</head>
+
+<body>
+  <nav class="menu" id="nav">
+    <img src="images/logo.svg" alt="Logo" />
+    <div class="hamburger" id="hamburger">
+      <div class="hamburger__inner"></div>
+    </div>
+    <ul class="menu__list" id="menu">
+      <li class="menu__item">
+        <a href="#">Home</a>
+      </li>
+      <li class="menu__item">
+        <a href="#">My projects</a>
+      </li>
+
+      <li class="menu__item">
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <hero class="main" id="hero">
+    <div class="main__container">
+      <h1 class="main__heading heading">
+        Hello 👋 <br />
+        I am Matthew
+      </h1>
+      <p class="main__description">Creative front-end developer</p>
+      <button class="btn">My projects</button>
+    </div>
+    <img src="images/hero-image.svg" alt="people-image-hero" class="main__image" />
+  </hero>
+  <section class="projects" id="projects">
+    <h2 class="projects__heading heading">My projects ⌨️</h2>
+    <div class="grid ">
+      <!-- grid item -->
+      <div class="grid__item">
+        <img src="images/design-url-shortening.jpg" alt="grid-img" class="grid__img" />
+        <div class="grid__info">
+          <h3 class="grid__heading">Flag REST-API</h3>
+          <ul class="grid__tags">
+            <li class="grid__tags__item">React</li>
+            <li class="grid__tags__item">Styled-components</li>
+          </ul>
+          <p class="grid__description">
+            React application based on REST API. App is using
+            styled-components
+          </p>
+          <button class="btn grid__btn">See more</button>
         </div>
       </div>
-    </section>
+      <!-- grid item -->
+      <div class="grid__item">
+        <img src="images/design-url-shortening.jpg" alt="grid-img" class="grid__img" />
+        <div class="grid__info">
+          <h3 class="grid__heading">Flag REST-API</h3>
+          <ul class="grid__tags">
+            <li class="grid__tags__item">React</li>
+            <li class="grid__tags__item">Styled-components</li>
+          </ul>
+          <p class="grid__description">
+            React application based on REST API. App is using
+            styled-components
+          </p>
+          <button class="btn grid__btn">See more</button>
+        </div>
+      </div>
+      <!-- grid item -->
+      <div class="grid__item">
+        <img src="images/design-url-shortening.jpg" alt="grid-img" class="grid__img" />
+        <div class="grid__info">
+          <h3 class="grid__heading">Flag REST-API</h3>
+          <ul class="grid__tags">
+            <li class="grid__tags__item">React</li>
+            <li class="grid__tags__item">Styled-components</li>
+          </ul>
+          <p class="grid__description">
+            React application based on REST API. App is using
+            styled-components
+          </p>
+          <button class="btn grid__btn">See more</button>
+        </div>
+      </div>
+      <!-- grid item -->
+      <div class="grid__item">
+        <img src="images/design-url-shortening.jpg" alt="grid-img" class="grid__img" />
+        <div class="grid__info">
+          <h3 class="grid__heading">Flag REST-API</h3>
+          <ul class="grid__tags">
+            <li class="grid__tags__item">React</li>
+            <li class="grid__tags__item">Styled-components</li>
+          </ul>
+          <p class="grid__description">
+            React application based on REST API. App is using
+            styled-components
+          </p>
+          <button class="btn grid__btn">See more</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
-    <section class="contact">
-      <form class="contact__form">
-        <h1 class="contact__heading">Get in touch! ✉️</h1>
-        <input type="email" placeholder="Email" class="contact__input" />
-        <input type="text" placeholder="Title" class="contact__input" />
-        <textarea
-          placeholder="Write something..."
-          id="textarea"
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button class="btn contact__btn">Send!</button>
-      </form>
-    </section>
-    <footer class="footer">
-      <p class="footer__text">
-        Made with ❣️ by <a href="https://github.com/h4rdPL"> h4rdPL</a>
-      </p>
-    </footer>
-    <script src="js/animation.js"></script>
-    <script src="./js/app.js"></script>
-  </body>
+  <section class="contact" id="contact">
+    <form class="contact__form">
+      <h1 class="contact__heading">Get in touch! ✉️</h1>
+      <input type="email" placeholder="Email" class="contact__input" />
+      <input type="text" placeholder="Title" class="contact__input" />
+      <textarea placeholder="Write something..." id="textarea" cols="30" rows="10"></textarea>
+      <button class="btn contact__btn">Send!</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <p class="footer__text">
+      Made with ❣️ by <a href="https://github.com/h4rdPL"> h4rdPL</a>
+    </p>
+  </footer>
+  <script src="js/animation.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
 </html>

@@ -8,12 +8,15 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  will-change: transform opacity;
+
   &__heading {
     @media (min-width: $tablet) {
       font-size: 1.7rem;
       margin-bottom: 1.5rem;
     }
   }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -21,10 +24,12 @@
     width: 100%;
     max-width: 450px;
   }
+
   &__input {
     padding: 0.7rem;
     border: 1px solid $secondaryColor;
   }
+
   &__btn {
     width: fit-content;
     align-self: flex-end;
