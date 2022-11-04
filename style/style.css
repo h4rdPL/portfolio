@@ -250,6 +250,11 @@ body::-webkit-scrollbar-thumb {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
@@ -322,6 +327,18 @@ body::-webkit-scrollbar-thumb {
 .contact__input {
   padding: 0.7rem;
   border: 1px solid hsl(0deg, 0%, 10%);
+}
+.contact__placeholder {
+  border: 1px solid hsl(0deg, 0%, 10%);
+}
+.contact__placeholder::-moz-placeholder {
+  padding: 10px;
+}
+.contact__placeholder:-ms-input-placeholder {
+  padding: 10px;
+}
+.contact__placeholder::placeholder {
+  padding: 10px;
 }
 .contact__btn {
   width: -webkit-fit-content;

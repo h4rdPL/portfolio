@@ -30,6 +30,14 @@
     border: 1px solid $secondaryColor;
   }
 
+  &__placeholder {
+    border: 1px solid $secondaryColor;
+  }
+
+  &__placeholder::placeholder {
+    padding: 10px;
+  }
+
   &__btn {
     width: fit-content;
     align-self: flex-end;

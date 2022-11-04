@@ -1,23 +1,24 @@
-
 const section = document.getElementsByClassName("grid");
 const contact = document.getElementById("contact");
-gsap.from("#nav", {
+const hero = document.getElementById("hero");
+const nav = document.getElementById("nav");
+gsap.from(nav, {
   opacity: 0,
   y: -10,
   duration: 1,
   scrollTrigger: {
-    trigger: "#hero",
+    trigger: hero,
     start: "top top"
   }
 });
-gsap.from("#hero", {
+gsap.from(hero, {
   opacity: 0,
   y: -100,
   delay: 0.5,
   duration: 1,
-
 });
-// project secion animation
+
+// project section animation
 gsap.fromTo(
   section,
   {

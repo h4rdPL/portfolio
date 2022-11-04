@@ -2,6 +2,7 @@
 .projects {
   text-align: center;
   padding: 2rem 4rem;
+
   &__heading {
     margin-bottom: 2rem;
   }
@@ -13,12 +14,20 @@
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   align-items: center;
+
   @media (min-width: $tablet) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media (min-width:$laptop) {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
   @media (min-width: $desktop) {
     grid-template-columns: repeat(4, 1fr);
   }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -30,19 +39,24 @@
     border-radius: 15px;
     overflow: hidden;
   }
+
   &__img {
     height: auto;
   }
+
   &__info {
     padding: 1.5rem;
   }
+
   &__heading {
     margin-bottom: 0.5rem;
   }
+
   &__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
     &__item {
       border-radius: 5px;
       color: $secondaryColor;
@@ -50,10 +64,12 @@
       padding: 0.2rem 1rem;
     }
   }
+
   &__description {
     font-size: 0.8rem;
     margin: 1.5rem 0;
   }
+
   &__btn {
     width: 100%;
     background-color: $white;
