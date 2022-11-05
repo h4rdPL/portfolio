@@ -19,6 +19,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", "sans-serif";
   overflow-x: hidden;
@@ -327,18 +331,6 @@ body::-webkit-scrollbar-thumb {
 .contact__input {
   padding: 0.7rem;
   border: 1px solid hsl(0deg, 0%, 10%);
-}
-.contact__placeholder {
-  border: 1px solid hsl(0deg, 0%, 10%);
-}
-.contact__placeholder::-moz-placeholder {
-  padding: 10px;
-}
-.contact__placeholder:-ms-input-placeholder {
-  padding: 10px;
-}
-.contact__placeholder::placeholder {
-  padding: 10px;
 }
 .contact__btn {
   width: -webkit-fit-content;

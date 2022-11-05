@@ -44,7 +44,7 @@ gsap.fromTo(
   {
     y: 0,
     opacity: 1,
-    duration: 2,
+    duration: 1,
     scrollTrigger: {
       trigger: contact,
       start: "top center"

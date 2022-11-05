@@ -18,9 +18,14 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font;
   overflow-x: hidden;
+
 }
 
 button,

@@ -36,13 +36,15 @@
     </ul>
   </nav>
   <hero class="main" id="hero">
-    <div class="main__container">
+    <div class="main__container" id="">
       <h1 class="main__heading heading">
         Hello 👋 <br />
         I am Matthew
       </h1>
       <p class="main__description">Creative front-end developer</p>
-      <button class="btn">My projects</button>
+      <a href="#projects">
+        <button class="btn">My projects</button>
+      </a>
     </div>
     <img src="images/hero-image.svg" alt="people-image-hero" class="main__image" />
   </hero>
@@ -122,8 +124,7 @@
       <h1 class="contact__heading">Get in touch! ✉️</h1>
       <input type="email" placeholder="Email" class="contact__input" />
       <input type="text" placeholder="Title" class="contact__input" />
-      <textarea class="contact__placeholder" placeholder="Write something..." id="textarea" cols="30"
-        rows="10"></textarea>
+      <textarea class="contact__input" placeholder="Write something..." id="textarea" cols="30" rows="10"></textarea>
       <button class="btn contact__btn">Send!</button>
     </form>
   </section>
