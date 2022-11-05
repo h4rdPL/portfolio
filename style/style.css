@@ -66,7 +66,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1.25rem;
   will-change: transform opacity;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .menu {
     padding: 0 2rem;
     -webkit-backdrop-filter: blur(1.5px);
@@ -90,7 +90,7 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s ease-in-out;
   z-index: 999;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .menu__list {
     position: relative;
     left: 0;
@@ -104,7 +104,21 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .menu__item {
+  position: relative;
   padding: 0.5rem;
+}
+.menu__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 15%;
+  height: 1px;
+  width: 0%;
+  background-color: hsl(0deg, 0%, 10%);
+  transition: all 0.3s ease-in-out;
+}
+.menu__item:hover::before {
+  width: 100%;
 }
 .menu__item a {
   text-decoration: none;
@@ -116,7 +130,7 @@ body::-webkit-scrollbar-thumb {
   width: 30px;
   cursor: pointer;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .hamburger {
     display: none;
   }
@@ -164,7 +178,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .main {
     flex-direction: row;
     justify-content: space-around;
@@ -202,7 +216,7 @@ body::-webkit-scrollbar-thumb {
     width: 75%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .main__image {
     width: 35%;
   }
@@ -259,9 +273,10 @@ body::-webkit-scrollbar-thumb {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
+    padding: 5rem;
   }
 }
 .grid__item {
