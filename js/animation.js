@@ -2,6 +2,7 @@ const section = document.getElementsByClassName("grid");
 const contact = document.getElementById("contact");
 const hero = document.getElementById("hero");
 const nav = document.getElementById("nav");
+// navigation and hero section animation
 gsap.from(nav, {
   opacity: 0,
   y: -10,
@@ -35,6 +36,7 @@ gsap.fromTo(
     },
   }
 );
+// contact section animation
 gsap.fromTo(
   contact.children,
   {

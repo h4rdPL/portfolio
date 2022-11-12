@@ -13,7 +13,7 @@
   padding: 1.25rem;
   will-change: transform opacity;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $laptop) {
     padding: 0 2rem;
     -webkit-backdrop-filter: blur(1.5px);
     backdrop-filter: blur(1.5px);
@@ -36,7 +36,7 @@
     transition: all 0.3s ease-in-out;
     z-index: 999;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $laptop) {
       position: relative;
       left: 0;
       flex-direction: row;
@@ -51,21 +51,27 @@
     position: relative;
     padding: 0.5rem;
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 15%;
-      height: 1px;
-      width: 0%;
-      background-color: $secondaryColor;
-      transition: all 0.3s ease-in-out;
-    }
-    &:hover::before {
-      width: 100%;
-    }
+
     a {
       text-decoration: none;
+      width: fit-content;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        height: 1px;
+        width: 0%;
+        background-color: $secondaryColor;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
     }
   }
 }
@@ -76,7 +82,7 @@
   width: 30px;
   cursor: pointer;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $laptop) {
     display: none;
   }
 
@@ -130,7 +136,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $laptop) {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -167,7 +173,7 @@
       width: 75%;
     }
 
-    @media (min-width: $desktop) {
+    @media (min-width: $laptop) {
       width: 35%;
     }
   }

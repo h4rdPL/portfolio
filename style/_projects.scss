@@ -56,7 +56,8 @@
   &__tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: .8rem;
+    margin: 1.5rem 0;
 
     &__item {
       border-radius: 5px;
