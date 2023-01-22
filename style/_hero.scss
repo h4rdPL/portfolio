@@ -12,12 +12,12 @@
   align-items: center;
   padding: 1.25rem;
   will-change: transform opacity;
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  background-color: #ededed3b;
 
   @media (min-width: $laptop) {
     padding: 0 2rem;
-    -webkit-backdrop-filter: blur(1.5px);
-    backdrop-filter: blur(1.5px);
-    background-color: #ededed3b;
   }
 
   &__list {
@@ -51,7 +51,6 @@
     position: relative;
     padding: 0.5rem;
 
-
     a {
       text-decoration: none;
       width: fit-content;
@@ -71,7 +70,6 @@
       &:hover::before {
         width: 100%;
       }
-
     }
   }
 }
