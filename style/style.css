@@ -39,12 +39,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: hsl(0deg, 0%, 10%);
+  background-color: hsl(0, 0%, 10%);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: hsl(53deg, 97%, 51%);
-  border: 1px solid hsl(0deg, 0%, 10%);
+  background-color: hsl(53, 97%, 51%);
+  border: 1px solid hsl(0, 0%, 10%);
   border-radius: 15px;
 }
 
@@ -64,10 +64,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 999;
   align-items: center;
   padding: 1.25rem;
-  will-change: transform opacity;
-  -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
-  background-color: rgba(237, 237, 237, 0.231372549);
+  background-color: #fff;
 }
 @media (min-width: 1024px) {
   .menu {
@@ -82,7 +79,7 @@ body::-webkit-scrollbar-thumb {
   left: 5%;
   width: 90%;
   text-align: center;
-  background-color: hsl(53deg, 97%, 51%);
+  background-color: hsl(53, 97%, 51%);
   border-radius: 7px;
   padding: 1.5rem 0;
   transform: translateY(calc(-100% - 64px));
@@ -97,10 +94,9 @@ body::-webkit-scrollbar-thumb {
     flex-direction: row;
     transform: translate(0);
     opacity: 1;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    background-color: transparent;
+    background-color: #fff;
   }
 }
 .menu__item {
@@ -109,7 +105,6 @@ body::-webkit-scrollbar-thumb {
 }
 .menu__item a {
   text-decoration: none;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
@@ -121,7 +116,7 @@ body::-webkit-scrollbar-thumb {
   bottom: 0%;
   height: 1px;
   width: 0%;
-  background-color: hsl(0deg, 0%, 10%);
+  background-color: hsl(0, 0%, 10%);
   transition: all 0.3s ease-in-out;
 }
 .menu__item a:hover::before {
@@ -146,7 +141,7 @@ body::-webkit-scrollbar-thumb {
   right: 0%;
   width: 30px;
   height: 1px;
-  background-color: hsl(0deg, 0%, 10%);
+  background-color: hsl(0, 0%, 10%);
   transform-origin: right center;
   transition: all 0.3s ease-in-out;
 }
@@ -157,7 +152,7 @@ body::-webkit-scrollbar-thumb {
   right: 0%;
   width: 30px;
   height: 1px;
-  background-color: hsl(0deg, 0%, 10%);
+  background-color: hsl(0, 0%, 10%);
   transform-origin: left;
   transition: all 0.3s ease-in-out;
 }
@@ -228,7 +223,7 @@ body::-webkit-scrollbar-thumb {
 
 .btn {
   position: relative;
-  background-color: hsl(53deg, 97%, 51%);
+  background-color: hsl(53, 97%, 51%);
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 7px;
@@ -243,7 +238,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid hsl(0deg, 0%, 10%);
+  border: 1px solid hsl(0, 0%, 10%);
   border-radius: 5px;
   transform: translate(-5px, 5px);
   transition: all 0.3s ease-in-out;
@@ -292,8 +287,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   text-align: left;
-  background-color: hsl(0deg, 0%, 10%);
-  color: hsl(255deg, 100%, 100%);
+  background-color: hsl(0, 0%, 10%);
+  color: hsl(255, 100%, 100%);
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
@@ -316,8 +311,8 @@ body::-webkit-scrollbar-thumb {
 }
 .grid__tags__item {
   border-radius: 5px;
-  color: hsl(0deg, 0%, 10%);
-  background-color: hsl(53deg, 97%, 51%);
+  color: hsl(0, 0%, 10%);
+  background-color: hsl(53, 97%, 51%);
   padding: 0.35rem 1rem;
 }
 .grid__description {
@@ -326,7 +321,7 @@ body::-webkit-scrollbar-thumb {
 }
 .grid__btn {
   width: 100%;
-  background-color: hsl(255deg, 100%, 100%);
+  background-color: hsl(255, 100%, 100%);
 }
 
 .contact {
@@ -355,10 +350,9 @@ body::-webkit-scrollbar-thumb {
 }
 .contact__input {
   padding: 0.7rem;
-  border: 1px solid hsl(0deg, 0%, 10%);
+  border: 1px solid hsl(0, 0%, 10%);
 }
 .contact__btn {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;

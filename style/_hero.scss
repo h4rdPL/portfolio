@@ -11,10 +11,7 @@
   z-index: 999;
   align-items: center;
   padding: 1.25rem;
-  will-change: transform opacity;
-  -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
-  background-color: #ededed3b;
+  background-color: #fff;
 
   @media (min-width: $laptop) {
     padding: 0 2rem;
@@ -43,7 +40,7 @@
       transform: translate(0);
       opacity: 1;
       width: fit-content;
-      background-color: transparent;
+      background-color: #fff;
     }
   }
 
