@@ -288,7 +288,6 @@ body::-webkit-scrollbar-thumb {
   background-color: hsl(0, 0%, 10%);
   color: hsl(255, 100%, 100%);
   margin: 0 auto;
-  border-radius: 10px;
   overflow: hidden;
 }
 .grid__item img {
