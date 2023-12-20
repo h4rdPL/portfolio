@@ -37,7 +37,7 @@
     background-color: $secondaryColor;
     color: $white;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     img {
       width: 100%;
@@ -65,7 +65,6 @@
     margin: 1.5rem 0;
 
     &__item {
-      border-radius: 5px;
       color: $secondaryColor;
       background-color: $primaryColor;
       padding: 0.35rem 1rem;

@@ -226,7 +226,6 @@ body::-webkit-scrollbar-thumb {
   background-color: hsl(53, 97%, 51%);
   border: none;
   padding: 0.75rem 2rem;
-  border-radius: 7px;
   cursor: pointer;
   font-weight: 500;
   z-index: 0;
@@ -239,7 +238,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   border: 1px solid hsl(0, 0%, 10%);
-  border-radius: 5px;
   transform: translate(-5px, 5px);
   transition: all 0.3s ease-in-out;
 }
@@ -290,7 +288,7 @@ body::-webkit-scrollbar-thumb {
   background-color: hsl(0, 0%, 10%);
   color: hsl(255, 100%, 100%);
   margin: 0 auto;
-  border-radius: 15px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .grid__item img {
@@ -314,7 +312,6 @@ body::-webkit-scrollbar-thumb {
   margin: 1.5rem 0;
 }
 .grid__tags__item {
-  border-radius: 5px;
   color: hsl(0, 0%, 10%);
   background-color: hsl(53, 97%, 51%);
   padding: 0.35rem 1rem;
