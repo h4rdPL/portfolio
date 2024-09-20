@@ -314,6 +314,7 @@ body::-webkit-scrollbar-thumb {
   color: hsl(0, 0%, 10%);
   background-color: hsl(53, 97%, 51%);
   padding: 0.35rem 1rem;
+  border-radius: 15px;
 }
 .grid__description {
   font-size: 0.8rem;
@@ -356,4 +357,7 @@ body::-webkit-scrollbar-thumb {
   width: -moz-fit-content;
   width: fit-content;
   align-self: flex-end;
-}/*# sourceMappingURL=style.css.map */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+} /*# sourceMappingURL=style.css.map */
