@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+
     <!-- gsap -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
@@ -226,6 +227,7 @@
           cols="30"
           rows="10"
         ></textarea>
+        <p class="contact__info" id="message-status"></p>
         <button id="send-btn" class="btn contact__btn">Send!</button>
       </form>
     </section>
@@ -237,7 +239,8 @@
     </footer>
 
     <script src="js/animation.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   </body>
 </html>

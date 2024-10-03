@@ -5,6 +5,7 @@ const email = document.getElementById("email");
 // hamburger
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
+const messageStatus = document.getElementById("message-status");
 
 const handleClick = () => {
   menu.classList.toggle("active");
@@ -14,21 +15,33 @@ const handleClick = () => {
 const handleSendEmail = (e) => {
   e.preventDefault();
   const messageParams = {
+    subject: subject.value,
     from_email: email.value,
     to_name: "mateusz.mamica18@gmail.com",
     message: body.value,
   };
-  emailjs.send("service_06yt80v", "template_ir8wxou", messageParams).then(
+  emailjs.send("service_k2dtdim", "template_ir8wxou", messageParams).then(
     function (res) {
-      console.log(res);
+      console.log("SUCCESS", res);
+
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { x: 0.5, y: 0.5 },
+      });
+
+      messageStatus.textContent = "Wiadomość została wysłana!";
+      messageStatus.style.display = "block";
     },
     function (error) {
       console.log("FAILED...", error);
+      console.error("Error Details:", error);
+      messageStatus.textContent = "The message has been sent!";
+      messageStatus.style.display = "block";
+      messageStatus.style.color = "red";
     }
   );
 };
 
 hamburger.addEventListener("click", handleClick);
-//smtp -> send email
-
 submit.addEventListener("click", handleSendEmail);

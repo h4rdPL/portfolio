@@ -386,6 +386,9 @@ body::-webkit-scrollbar-thumb {
   padding: 0.7rem;
   border: 1px solid hsl(0, 0%, 10%);
 }
+.contact__info {
+  text-align: right;
+}
 .contact__btn {
   width: -moz-fit-content;
   width: fit-content;
