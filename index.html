@@ -61,9 +61,17 @@
         class="main__image"
       />
     </hero>
-
     <section class="projects" id="projects">
       <h2 class="projects__heading heading">My projects ⌨️</h2>
+      <div class="projects__filter">
+        <label for="filter-select">Filter by:</label>
+        <select id="filter-select" class="filter-select">
+          <option value="all" selected>All</option>
+          <option value="algorithm">Algorithm</option>
+          <option value=".NET">.NET</option>
+          <option value="React">React</option>
+        </select>
+      </div>
       <div class="grid">
         <!-- grid item -->
         <div class="grid__item">
@@ -196,6 +204,27 @@
             <a
               href="https://github.com/h4rdPL/restAPI-react-projetct-frontend-mentor"
             >
+              <button class="btn grid__btn">See more</button>
+            </a>
+          </div>
+        </div>
+        <div class="grid__item">
+          <img src="images/algorithm.jpg" alt="grid-img" class="grid__img" />
+          <div class="grid__info">
+            <h3 class="grid__heading">
+              Selection Sort
+              <span class="grid__tag grid__tag--done">done</span>
+            </h3>
+            <ul class="grid__tags">
+              <li class="grid__tags__item">C#</li>
+              <li class="grid__tags__item">WPF</li>
+              <li class="grid__tags__item">Algorithm</li>
+            </ul>
+            <p class="grid__description">
+              A Selection Sort visualization written in C# using WPF, showing
+              step-by-step sorting of an array
+            </p>
+            <a href="https://github.com/h4rdPL/algorithms-selection-sort">
               <button class="btn grid__btn">See more</button>
             </a>
           </div>

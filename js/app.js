@@ -71,3 +71,24 @@ const handleSendEmail = (e) => {
 
 hamburger.addEventListener("click", handleClick);
 submit.addEventListener("click", handleSendEmail);
+
+const filterSelect = document.getElementById("filter-select");
+const gridItems = document.querySelectorAll(".grid__item");
+
+filterSelect.addEventListener("change", (event) => {
+  const selectedCategory = event.target.value;
+
+  gridItems.forEach((item) => {
+    const tags = Array.from(item.querySelectorAll(".grid__tags__item"));
+    const tagValues = tags.map((tag) => tag.textContent.trim().toLowerCase());
+
+    if (
+      selectedCategory === "all" ||
+      tagValues.includes(selectedCategory.toLowerCase())
+    ) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
