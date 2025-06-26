@@ -63,7 +63,7 @@ const Image = styled.img`
   height: auto;
 
   @media (min-width: 768px) {
-    max-width: 30%;
+    max-width: 40%;
     flex: 1;
     margin-left: 2rem;
   }
@@ -79,7 +79,7 @@ export const Hero = () => {
         <p>Software Engineer</p>
         <StyledButton>My projects</StyledButton>
       </HeroContent>
-      <Image src="images/hero_people.png" alt="hero_image" />
+      <Image src="images/hero_people.svg" alt="hero_image" />
     </HeroWrapper>
   );
 };
