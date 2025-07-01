@@ -32,7 +32,7 @@ export const projects: Project[] = [
     tag: "new",
     stack: ["Python", "OpenCV", "Machine Learning"],
     description: "License plate detection with computer vision",
-    link: "#",
+    link: "https://github.com/h4rdPL/plate_recognition",
   },
   {
     title: "PlantUML AI Generator",
