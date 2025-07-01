@@ -1,9 +1,7 @@
-"use client";
-import { Menu } from "lucide-react";
-import React, { useState } from "react";
 import styled from "styled-components";
+import { Menu } from "lucide-react";
 
-const NavbarWrapper = styled.nav`
+export const NavbarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   min-width: 100%;
@@ -18,7 +16,7 @@ const NavbarWrapper = styled.nav`
   }
 `;
 
-const NavLinks = styled.ul<{ $isOpen: boolean }>`
+export const NavLinks = styled.ul<{ $isOpen: boolean }>`
   list-style: none;
   overflow: hidden;
   max-height: ${({ $isOpen }) => ($isOpen ? "500px" : "0")};
@@ -83,36 +81,10 @@ const NavLinks = styled.ul<{ $isOpen: boolean }>`
   }
 `;
 
-const MenuIcon = styled(Menu)`
+export const MenuIcon = styled(Menu)`
   cursor: pointer;
 
   @media (min-width: 768px) {
     display: none;
   }
 `;
-
-export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
-
-  return (
-    <NavbarWrapper>
-      <img src="images/logo.svg" alt="Logo" />
-      <NavLinks $isOpen={menuOpen}>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">My projects</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </NavLinks>
-      <MenuIcon onClick={toggleMenu} />
-    </NavbarWrapper>
-  );
-};
