@@ -24,7 +24,6 @@ import {
   ProjectContent,
   ProjectHeader,
   ProjectTitle,
-  Tag,
   StackList,
   StackItem,
   ProjectDescription,
@@ -34,64 +33,10 @@ import {
   FloatingElement,
 } from "./Projects-style";
 
-type Project = {
-  title: string;
-  image: string;
-  tag: string;
-  stack: string[];
-  description: string;
-  link: string;
-};
-
-const projects: Project[] = [
-  {
-    title: "Airbnb Clone",
-    image: "/images/airbnb-clone.png",
-    tag: "refactoring",
-    stack: [".NET", "TDD", "Clean Architecture"],
-    description: "React app based on REST API using styled-components.",
-    link: "https://github.com/h4rdPL/airbnb",
-  },
-  {
-    title: "DevCenter",
-    image: "/images/dev_center.png",
-    tag: "in progress",
-    stack: [".NET", "TDD", "Clean Architecture"],
-    description: "React app based on REST API using styled-components.",
-    link: "https://github.com/h4rdPL/devCenter",
-  },
-  {
-    title: "Product List Card",
-    image:
-      "https://github.com/h4rdPL/restaurant-cart/blob/main/src/assets/design/desktop-design-empty.jpg?raw=true",
-    tag: "done",
-    stack: ["React", "Styled-components"],
-    description: "React app based on REST API using styled-components.",
-    link: "https://github.com/h4rdPL/devCenter",
-  },
-  {
-    title: "Plate recognition",
-    image: "/images/plate_recognition.png",
-    tag: "new",
-    stack: ["Python", "OpenCV", "Machine Learning"],
-    description: "License plate detection with computer vision",
-    link: "#",
-  },
-  {
-    title: "PlantUML AI Generator",
-    image: "/images/plantuml_generator.png",
-    tag: "new",
-    stack: ["Python", "TypeScript", "Next.js", "OpenAI API", "PlantUML"],
-    description:
-      "AI-powered tool to generate PlantUML diagrams from NLP descriptions.",
-    link: "#",
-  },
-];
-
-interface ProjectCardProps {
-  project: Project;
-  delay?: string;
-}
+import { ProjectCardProps } from "@/src/app/types/Project";
+import { Tag } from "../../atoms/Tag";
+import { projects } from "@/src/app/data/Project";
+import { Button } from "../../atoms/Button";
 
 const ProjectCardComponent: React.FC<ProjectCardProps> = ({
   project,
@@ -104,34 +49,30 @@ const ProjectCardComponent: React.FC<ProjectCardProps> = ({
     <ProjectContent>
       <ProjectHeader>
         <ProjectTitle>{project.title}</ProjectTitle>
-        <Tag type={project.tag}>{project.tag}</Tag>
+
+        <Tag variant="project-status" type={project.tag}>
+          {project.tag}
+        </Tag>
       </ProjectHeader>
+
       <StackList>
         {project.stack.map((tech) => (
           <StackItem key={tech}>{tech}</StackItem>
         ))}
       </StackList>
+
       <ProjectDescription>{project.description}</ProjectDescription>
-      <ProjectLink
+
+      <Button
+        as="a"
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
+        variant="link"
+        showArrow
       >
         See more
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </ProjectLink>
+      </Button>
     </ProjectContent>
   </ProjectCard>
 );

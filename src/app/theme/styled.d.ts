@@ -40,12 +40,17 @@ declare module "styled-components" {
       hoverLight: string;
       hoverDark: string;
       button: string;
+      tertiaryLight: string;
+      suscessDark: string;
+      infoDark: string;
+      warningDark: string;
     };
     fonts: {
       primary: string;
       secondary: string;
     };
     fontSize: {
+      extraSmall: string;
       small: string;
       medium: string;
       large: string;

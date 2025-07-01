@@ -33,6 +33,10 @@ export const Theme = {
     hoverDark: "#6366F1",
 
     button: "#E0E0FC",
+    tertiaryLight: "rgba(99, 102, 241, 0.1)",
+    successDark: "#166534",
+    infoDark: "#1e3a8a",
+    warningDark: "#92400e",
   },
 
   fonts: {
@@ -40,6 +44,7 @@ export const Theme = {
     secondary: "'Inter', sans-serif",
   },
   fontSize: {
+    extraSmall: "0.9rem",
     small: "1rem",
     medium: "2rem",
     large: "3rem",
