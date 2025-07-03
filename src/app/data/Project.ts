@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     title: "Plate recognition",
     image: "/images/plate_recognition.png",
-    tag: "new",
+    tag: "done",
     stack: ["Python", "OpenCV", "Machine Learning"],
     description: "License plate detection with computer vision",
     link: "https://github.com/h4rdPL/plate_recognition",
@@ -37,10 +37,34 @@ export const projects: Project[] = [
   {
     title: "PlantUML AI Generator",
     image: "/images/plantuml_generator.png",
-    tag: "new",
+    tag: "done",
     stack: ["Python", "TypeScript", "Next.js", "OpenAI API", "PlantUML"],
     description:
       "AI-powered tool to generate PlantUML diagrams from NLP descriptions.",
     link: "#",
+  },
+  {
+    title: "Fitness prediction app",
+    image: "/images/cat_fit.png",
+    tag: "new",
+    stack: ["Python", "React Native", "TypeScript", "Next.js", "OpenAI API"],
+    description: "Machine Learning mobile app to improve our workout",
+    link: "#",
+  },
+  {
+    title: "Nexcent Landing",
+    image: "/images/nexcent.png",
+    tag: "done",
+    stack: ["TypeScript", "Vite.js"],
+    description: "Landing Page website from Figma Community",
+    link: "https://github.com/h4rdPL/nexcent",
+  },
+  {
+    title: "DotLearn",
+    image: "/images/nexcent.png",
+    tag: "done",
+    stack: ["C#", ".NET", "TypeScript", "React.js"],
+    description: "Languages learning application",
+    link: "https://github.com/h4rdPL/dotLearn",
   },
 ];
