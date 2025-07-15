@@ -9,14 +9,7 @@ export const projects: Project[] = [
     description: "React app based on REST API using styled-components.",
     link: "https://github.com/h4rdPL/airbnb",
   },
-  {
-    title: "DevCenter",
-    image: "/images/dev_center.png",
-    tag: "in progress",
-    stack: [".NET", "TDD", "Clean Architecture"],
-    description: "React app based on REST API using styled-components.",
-    link: "https://github.com/h4rdPL/devCenter",
-  },
+
   {
     title: "Product List Card",
     image:
@@ -35,7 +28,7 @@ export const projects: Project[] = [
     link: "https://github.com/h4rdPL/plate_recognition",
   },
   {
-    title: "PlantUML AI Generator",
+    title: "PlantUML Generator",
     image: "/images/plantuml_generator.png",
     tag: "done",
     stack: ["Python", "TypeScript", "Next.js", "OpenAI API", "PlantUML"],
@@ -61,7 +54,7 @@ export const projects: Project[] = [
   },
   {
     title: "DotLearn",
-    image: "/images/nexcent.png",
+    image: "/images/dotLearn.png",
     tag: "done",
     stack: ["C#", ".NET", "TypeScript", "React.js"],
     description: "Languages learning application",

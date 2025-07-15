@@ -1,7 +1,10 @@
 import { PropsWithChildren } from "react";
 import styled, { css } from "styled-components";
 import { ArrowRight } from "lucide-react";
-interface ButtonProps {
+import { MotionProps, motion } from "framer-motion";
+
+// Extend ButtonProps with MotionProps
+interface ButtonProps extends MotionProps {
   variant?: "default" | "link";
   showArrow?: boolean;
   as?: React.ElementType;
@@ -11,7 +14,8 @@ interface ButtonProps {
   className?: string;
 }
 
-const StyledButton = styled.button<ButtonProps>`
+// Create a motion-enabled styled component
+const StyledButton = styled(motion.button)<ButtonProps>`
   cursor: pointer;
   font-weight: 600;
   border-radius: ${({ theme }) => theme.borderRadius.md};
@@ -69,6 +73,7 @@ export const Button = ({
   target,
   rel,
   className,
+  ...motionProps
 }: PropsWithChildren<ButtonProps>) => {
   return (
     <StyledButton
@@ -78,6 +83,7 @@ export const Button = ({
       rel={rel}
       variant={variant}
       className={className}
+      {...motionProps}
     >
       {children}
       {showArrow && <ArrowRight />}

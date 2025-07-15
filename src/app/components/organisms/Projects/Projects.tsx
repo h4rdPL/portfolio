@@ -12,7 +12,7 @@ import {
   Autoplay,
   EffectCoverflow,
 } from "swiper/modules";
-
+import { motion } from "framer-motion";
 import {
   ProjectsSection,
   Subtitle,
@@ -27,12 +27,10 @@ import {
   StackList,
   StackItem,
   ProjectDescription,
-  ProjectLink,
   StyledSwiper,
   FloatingElements,
   FloatingElement,
 } from "./Projects-style";
-
 import { ProjectCardProps } from "@/src/app/types/Project";
 import { Tag } from "../../atoms/Tag";
 import { projects } from "@/src/app/data/Project";
@@ -42,39 +40,80 @@ const ProjectCardComponent: React.FC<ProjectCardProps> = ({
   project,
   delay,
 }) => (
-  <ProjectCard delay={delay}>
-    <ImageContainer>
-      <ProjectImage src={project.image} alt={project.title} />
-    </ImageContainer>
-    <ProjectContent>
-      <ProjectHeader>
-        <ProjectTitle>{project.title}</ProjectTitle>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: typeof delay === "string" ? parseFloat(delay) : 0 }}
+    whileHover={{
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    }}
+    style={{ perspective: 1000 }}
+  >
+    <motion.div
+      whileHover={{
+        rotateY: 5,
+        rotateX: -5,
+        transition: { duration: 0.5 },
+      }}
+      style={{
+        transformStyle: "preserve-3d",
+      }}
+    >
+      <ProjectCard delay={delay}>
+        <ImageContainer>
+          <ProjectImage
+            src={project.image}
+            alt={project.title}
+            as={motion.img}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          />
+        </ImageContainer>
+        <ProjectContent>
+          <ProjectHeader>
+            <ProjectTitle>{project.title}</ProjectTitle>
+            <Tag variant="project-status" type={project.tag}>
+              {project.tag}
+            </Tag>
+          </ProjectHeader>
 
-        <Tag variant="project-status" type={project.tag}>
-          {project.tag}
-        </Tag>
-      </ProjectHeader>
+          <StackList>
+            {project.stack.map((tech) => (
+              <StackItem
+                key={tech}
+                as={motion.li}
+                whileHover={{
+                  scale: 1.05,
+                  originX: 0,
+                  color: "var(--primary-color)",
+                }}
+              >
+                {tech}
+              </StackItem>
+            ))}
+          </StackList>
 
-      <StackList>
-        {project.stack.map((tech) => (
-          <StackItem key={tech}>{tech}</StackItem>
-        ))}
-      </StackList>
+          <ProjectDescription>{project.description}</ProjectDescription>
 
-      <ProjectDescription>{project.description}</ProjectDescription>
-
-      <Button
-        as="a"
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        variant="link"
-        showArrow
-      >
-        See more
-      </Button>
-    </ProjectContent>
-  </ProjectCard>
+          <Button
+            as={motion.a}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="link"
+            showArrow
+            whileHover={{
+              scale: 1.05,
+              x: 5,
+            }}
+          >
+            See more
+          </Button>
+        </ProjectContent>
+      </ProjectCard>
+    </motion.div>
+  </motion.div>
 );
 
 export const Projects: React.FC = () => {
