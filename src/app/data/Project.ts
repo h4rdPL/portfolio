@@ -60,4 +60,17 @@ export const projects: Project[] = [
     description: "Languages learning application",
     link: "https://github.com/h4rdPL/dotLearn",
   },
+  {
+    title: "Car Route Optimizer",
+    image: "/images/python_ML.png",
+    tag: "done",
+    stack: [
+      "Python",
+      "Genetic Algorithms",
+      "Operations Research",
+      "Matplotlib",
+    ],
+    description: "Genetic algorithm VRP solver with feline supervision",
+    link: "https://github.com/yourusername/CatRoute-Optimizer",
+  },
 ];

@@ -3,6 +3,7 @@ import { Navbar } from "@/src/app/components/organisms/Navbar/Navbar";
 import { Hero } from "@/src/app/components/organisms/Hero/Hero";
 import { TechStack } from "./components/organisms/TechStack/TechStack";
 import { Projects } from "./components/organisms/Projects/Projects";
+import { Education } from "./components/organisms/Education/Education";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Projects />
       <TechStack />
+      <Education />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import {
+  HeroWrapper,
   HeroContentWrapper,
   StyledButton,
   StyledHeading,
@@ -8,11 +9,13 @@ import {
 } from "./Hero-style";
 
 export const HeroContent = () => (
-  <HeroContentWrapper>
-    <StyledHeading>
-      Hello <WavingHand>👋</WavingHand> <br />I am Matthew
-    </StyledHeading>
-    <p>Software Engineer</p>
-    <StyledButton>My projects</StyledButton>
-  </HeroContentWrapper>
+  <HeroWrapper>
+    <HeroContentWrapper>
+      <StyledHeading>
+        Hello <WavingHand>👋</WavingHand> <br />I am Matthew
+      </StyledHeading>
+      <p>Software Engineer</p>
+      <StyledButton>My projects</StyledButton>
+    </HeroContentWrapper>
+  </HeroWrapper>
 );
