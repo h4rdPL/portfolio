@@ -28,7 +28,7 @@ export const SectionHeader = styled.div`
 export const SectionTitle = styled.h2`
   font-size: 2.75rem;
   margin-bottom: 1rem;
-
+  font-weight: 400;
   @media (max-width: 768px) {
     font-size: 2.25rem;
   }

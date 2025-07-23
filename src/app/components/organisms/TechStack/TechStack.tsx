@@ -1,6 +1,5 @@
 "use client";
 
-import styled from "styled-components";
 import { Tag } from "../../atoms/Tag";
 import { techData } from "@/src/app/data/TechStack";
 import {

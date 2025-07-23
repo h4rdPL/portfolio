@@ -74,6 +74,7 @@ export const Title = styled.h2`
   position: relative;
   color: #1e293b;
   opacity: 0;
+  font-weight: 400;
   animation: ${fadeInUp} 0.8s ease-out 0.2s forwards;
 `;
 
