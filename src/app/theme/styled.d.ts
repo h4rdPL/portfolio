@@ -41,7 +41,7 @@ declare module "styled-components" {
       hoverDark: string;
       button: string;
       tertiaryLight: string;
-      suscessDark: string;
+      successDark: string;
       infoDark: string;
       warningDark: string;
     };
