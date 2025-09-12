@@ -2,6 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
+type PupilPosition = { cx: number; cy: number };
+type EyeCenter = { x: number; y: number };
+
 export const HeroSVG = () => {
   const [svgContent, setSvgContent] = useState<string>("");
   const svgContainerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +46,7 @@ export const HeroSVG = () => {
 
     if (!leftEye || !rightEye || !leftPupil || !rightPupil) return;
 
-    const getOriginal = (el: Element) => ({
+    const getOriginal = (el: Element): PupilPosition => ({
       cx: parseFloat(el.getAttribute("cx") || "0"),
       cy: parseFloat(el.getAttribute("cy") || "0"),
     });
@@ -55,7 +58,7 @@ export const HeroSVG = () => {
     const leftEyeRect = leftEye.getBoundingClientRect();
     const rightEyeRect = rightEye.getBoundingClientRect();
 
-    const centerOf = (rect: DOMRect) => ({
+    const centerOf = (rect: DOMRect): EyeCenter => ({
       x: (rect.left + rect.right) / 2 - svgRect.left,
       y: (rect.top + rect.bottom) / 2 - svgRect.top,
     });
@@ -68,7 +71,7 @@ export const HeroSVG = () => {
       const mouseX = e.clientX - svgRect.left;
       const mouseY = e.clientY - svgRect.top;
 
-      const move = (eyeCenter: any, original: any) => {
+      const move = (eyeCenter: EyeCenter, original: PupilPosition): PupilPosition => {
         const dx = mouseX - eyeCenter.x;
         const dy = mouseY - eyeCenter.y;
         const dist = Math.min(Math.hypot(dx, dy), maxMovement);
@@ -82,15 +85,12 @@ export const HeroSVG = () => {
       const newLeft = move(leftEyeCenter, leftPupilOriginal);
       const newRight = move(rightEyeCenter, rightPupilOriginal);
 
-      gsap.to(leftPupil, { attr: newLeft, duration: 0.3, ease: "power2.out" });
-      gsap.to(rightPupil, {
-        attr: newRight,
-        duration: 0.3,
-        ease: "power2.out",
-      });
+      gsap.to(leftPupil, { attr: { cx: newLeft.cx, cy: newLeft.cy }, duration: 0.3, ease: "power2.out" });
+      gsap.to(rightPupil, { attr: { cx: newRight.cx, cy: newRight.cy }, duration: 0.3, ease: "power2.out" });
     };
 
     window.addEventListener("mousemove", moveEyes);
+
     const createSteamAnimation = () => {
       const coffeeCup = svgElement.querySelector<SVGPathElement>(
         'path[d^="M2109.3,2060.32"]'
@@ -108,10 +108,7 @@ export const HeroSVG = () => {
       const totalSteamWidth = 80;
 
       for (let i = 0; i < 4; i++) {
-        const steam = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "path"
-        );
+        const steam = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
         const baseD = `M0,0
       C10,-15 30,-25 25,-40
@@ -129,10 +126,7 @@ export const HeroSVG = () => {
         const xPos = centerX + xOffset;
         const yPos = bbox.y - 30;
 
-        steam.setAttribute(
-          "transform",
-          `translate(${xPos}, ${yPos}) scale(1) rotate(0)`
-        );
+        steam.setAttribute("transform", `translate(${xPos}, ${yPos}) scale(1) rotate(0)`);
 
         coffeeGroup.appendChild(steam);
         steamElements.current.push(steam);
@@ -146,47 +140,30 @@ export const HeroSVG = () => {
         const riseDistance1 = 120 + Math.random() * 40;
         const riseDistance2 = riseDistance1 + 80 + Math.random() * 40;
 
-        tl.to(steam, {
-          duration: 0.6,
-          opacity: 0.6,
-          ease: "sine.inOut",
-        })
+        tl.to(steam, { duration: 0.6, opacity: 0.6, ease: "sine.inOut" })
           .to(steam, {
             duration: 3,
             ease: "power1.out",
-            onUpdate: function () {
+            onUpdate(this: gsap.core.Tween) {
               const progress = this.progress();
               const newY = yPos - riseDistance1 * progress;
               const driftX = xPos + 10 * Math.sin(progress * Math.PI * 2 + i);
               const rotation = 5 * Math.sin(progress * Math.PI * 4 + i);
-
               const scale = 1 + 0.5 * progress;
-
-              steam.setAttribute(
-                "transform",
-                `translate(${driftX}, ${newY}) scale(${scale}) rotate(${rotation})`
-              );
+              steam.setAttribute("transform", `translate(${driftX}, ${newY}) scale(${scale}) rotate(${rotation})`);
             },
           })
           .to(steam, {
             duration: 2,
             opacity: 0,
             ease: "power1.in",
-            onUpdate: function () {
+            onUpdate(this: gsap.core.Tween) {
               const progress = this.progress();
-              const newY =
-                yPos -
-                riseDistance1 -
-                (riseDistance2 - riseDistance1) * progress;
+              const newY = yPos - riseDistance1 - (riseDistance2 - riseDistance1) * progress;
               const driftX = xPos + 15 * Math.sin(progress * Math.PI * 3 + i);
               const rotation = 10 * Math.sin(progress * Math.PI * 4 + i);
-
               const scale = 1.5 + 0.8 * progress;
-
-              steam.setAttribute(
-                "transform",
-                `translate(${driftX}, ${newY}) scale(${scale}) rotate(${rotation})`
-              );
+              steam.setAttribute("transform", `translate(${driftX}, ${newY}) scale(${scale}) rotate(${rotation})`);
             },
           });
       }

@@ -26,9 +26,7 @@ export const Education: React.FC = () => {
           setHasAnimated(true);
         }
       },
-      {
-        threshold: 0.2,
-      }
+      { threshold: 0.2 }
     );
 
     const section = sectionRef.current;
@@ -46,31 +44,25 @@ export const Education: React.FC = () => {
         <MainTitle>Education</MainTitle>
         <EducationList isVisible={hasAnimated}>
           {educationData.map((edu, eduIndex) => (
-            <EducationItem
-              key={eduIndex}
-              index={eduIndex}
-              isVisible={hasAnimated}
-            >
+            <EducationItem key={eduIndex} index={eduIndex} isVisible={hasAnimated}>
               <ItemHeader>
                 <div>
                   <DegreeTitle>{edu.degree}</DegreeTitle>
                   <Institution>{edu.institution}</Institution>
                 </div>
-                {/* Make sure index is passed to enable animation */}
                 <Tag variant="duration" index={eduIndex}>
                   {edu.duration}
                 </Tag>
               </ItemHeader>
-
               <Description>{edu.description}</Description>
-
               <SkillsContainer>
-                {edu.skills.map((skill, skillIndex) =>
-                  skill ? (
-                    <Tag key={skillIndex} index={skillIndex} variant="tech">
-                      {skill}
-                    </Tag>
-                  ) : null
+                {edu.skills.map(
+                  (skill, skillIndex) =>
+                    skill && (
+                      <Tag key={skillIndex} index={skillIndex} variant="tech">
+                        {skill}
+                      </Tag>
+                    )
                 )}
               </SkillsContainer>
             </EducationItem>

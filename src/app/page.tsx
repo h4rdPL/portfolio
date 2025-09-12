@@ -4,6 +4,7 @@ import { Hero } from "@/src/app/components/organisms/Hero/Hero";
 import { TechStack } from "./components/organisms/TechStack/TechStack";
 import { Projects } from "./components/organisms/Projects/Projects";
 import { Education } from "./components/organisms/Education/Education";
+import { Footer } from "./components/organisms/Footer/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Projects />
       <TechStack />
       <Education />
+      <Footer />
     </>
   );
 }

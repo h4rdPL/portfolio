@@ -17,7 +17,7 @@ export const projects: Project[] = [
     tag: "done",
     stack: ["React", "Styled-components"],
     description: "React app based on REST API using styled-components.",
-    link: "https://github.com/h4rdPL/devCenter",
+    link: "https://github.com/h4rdPL/restaurant-cart",
   },
   {
     title: "Plate recognition",
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     stack: ["Python", "TypeScript", "Next.js", "OpenAI API", "PlantUML"],
     description:
       "AI-powered tool to generate PlantUML diagrams from NLP descriptions.",
-    link: "#",
+    link: "https://github.com/h4rdPL/DiagramGenieApp",
   },
   {
     title: "Fitness prediction app",
@@ -71,6 +71,6 @@ export const projects: Project[] = [
       "Matplotlib",
     ],
     description: "Genetic algorithm VRP solver with feline supervision",
-    link: "https://github.com/yourusername/CatRoute-Optimizer",
+    link: "https://github.com/h4rdPL/car_optimizer/tree/mainr",
   },
 ];

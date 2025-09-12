@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { NavbarWrapper, NavLinks, MenuIcon } from "./Navbar-style";
 
 export const Navbar = () => {
@@ -12,7 +13,7 @@ export const Navbar = () => {
 
   return (
     <NavbarWrapper>
-      <img src="images/logo.svg" alt="Logo" />
+      <Image src="/images/logo.svg" alt="Logo" width={50} height={50} />
       <NavLinks $isOpen={menuOpen}>
         <li>
           <a href="#">Home</a>
