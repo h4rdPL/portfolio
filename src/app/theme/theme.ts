@@ -34,7 +34,7 @@ export const Theme = {
 
     button: "#E0E0FC",
     tertiaryLight: "rgba(99, 102, 241, 0.1)",
-    suscessDark: "#166534",
+    successDark: "#166534",
     infoDark: "#1e3a8a",
     warningDark: "#92400e",
   },
