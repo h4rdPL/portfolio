@@ -27,7 +27,7 @@ export const educationData: EducationData[] = [
     ],
   },
   {
-    degree: "Bachelor of Software Engineering",
+    degree: "Bachelor of Computer Science",
     institution: "Cavalry Captain Witold Pilecki State University in Oświęcim",
     duration: "2020 - 2024",
     description:
