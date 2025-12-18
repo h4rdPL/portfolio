@@ -9,6 +9,14 @@ export const projects: Project[] = [
     description: "React app based on REST API using styled-components.",
     link: "https://github.com/h4rdPL/airbnb",
   },
+  {
+    title: "Tasker",
+    image: "",
+    tag: "in progress",
+    stack: [".NET", "TDD", "Clean Architecture"],
+    description: ".NET web api for task management",
+    link: "https://github.com/h4rdPL/Tasker",
+  },
 
   {
     title: "Product List Card",
@@ -42,7 +50,7 @@ export const projects: Project[] = [
     tag: "new",
     stack: ["Python", "React Native", "TypeScript", "Next.js", "OpenAI API"],
     description: "Machine Learning mobile app to improve our workout",
-    link: "#",
+    link: "https://github.com/h4rdPL/catfit",
   },
   {
     title: "Nexcent Landing",
