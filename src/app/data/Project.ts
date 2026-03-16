@@ -11,9 +11,9 @@ export const projects: Project[] = [
   },
   {
     title: "Tasker",
-    image: "",
-    tag: "in progress",
-    stack: [".NET", "TDD", "Clean Architecture"],
+    image: "/images/tasker.png",
+    tag: "done",
+    stack: [".NET", "DDD", "Clean Architecture"],
     description: ".NET web api for task management",
     link: "https://github.com/h4rdPL/Tasker",
   },
@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     title: "Product List Card",
     image:
-      "https://github.com/h4rdPL/restaurant-cart/blob/main/src/assets/design/desktop-design-empty.jpg?raw=true",
+      "/images/dessert.png",
     tag: "done",
     stack: ["React", "Styled-components"],
     description: "React app based on REST API using styled-components.",
@@ -44,14 +44,7 @@ export const projects: Project[] = [
       "AI-powered tool to generate PlantUML diagrams from NLP descriptions.",
     link: "https://github.com/h4rdPL/DiagramGenieApp",
   },
-  {
-    title: "Fitness prediction app",
-    image: "/images/cat_fit.png",
-    tag: "new",
-    stack: ["Python", "React Native", "TypeScript", "Next.js", "OpenAI API"],
-    description: "Machine Learning mobile app to improve our workout",
-    link: "https://github.com/h4rdPL/catfit",
-  },
+
   {
     title: "Nexcent Landing",
     image: "/images/nexcent.png",
@@ -79,6 +72,18 @@ export const projects: Project[] = [
       "Matplotlib",
     ],
     description: "Genetic algorithm VRP solver with feline supervision",
+    link: "https://github.com/h4rdPL/car_optimizer/tree/mainr",
+  },
+    {
+    title: "Positivus",
+    image: "/images/positivus.png",
+    tag: "done",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    description: "Landing page website",
     link: "https://github.com/h4rdPL/car_optimizer/tree/mainr",
   },
 ];
